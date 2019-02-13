@@ -1,0 +1,46 @@
+
+/**
+ * Make a program that can give you exact change
+ *
+ * @LMADN
+ * @2/11
+ */
+import java.util.Scanner;
+public class MakeChange
+{
+    public static void main(String[] args)
+    {
+    Scanner in = new Scanner(System.in);
+    
+    System.out.print("Please enter a dollar amount: ");
+    int dollaramount = in.nextInt();
+    int numTwenties = dollaramount/20;
+    int afterTwenties = dollaramount%20;
+    int numTens = afterTwenties/10;
+    int afterTens = afterTwenties%10;
+    int numFives = afterTens/5;
+    int afterFives = afterTens%5;
+    int numSingles = afterFives/1;
+    
+    System.out.print("Please enter a cents amount: ");
+    int Centsamount = in.nextInt();
+    int NumQuarters = Centsamount/25;
+    int afterQuarters = Centsamount%25;
+    int NumDimes = afterQuarters/10;
+    int afterdimes = afterQuarters%10;
+    int NumNickels = afterdimes/5;
+    int afterNickels = afterdimes%5;
+    int NumPennies = afterNickels/1;
+    
+    System.out.println("The change will be " + numTwenties + " twenties ");
+    System.out.println("Plus "  +  numTens  +  " tens ");
+    System.out.println("Plus "  +  numFives  +  " fives ");
+    System.out.println("Plus "  +  numSingles  + " singles ");
+    
+    System.out.println("And "  +  NumQuarters  +  " quarters ");
+    System.out.println("And "  +  NumDimes  +  " dimes ");
+    System.out.println("And "  +  NumNickels  +  " nickels ");
+    System.out.println("And "  +  NumPennies  +  " pennies ");
+    
+    }
+}
